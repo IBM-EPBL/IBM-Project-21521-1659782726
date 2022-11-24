@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Classification</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon2.png') }}">
+    <style>
+
+        body {
+            margin: 30px;
+            background-color: #f5ece4;
+        }
+        .nav_bar {
+            position:relative;
+            height: 50px;
+            width: 100%;
+            border-radius: 10px;
+            /* background-color: rgb(105, 237, 138); */
+            background-image: linear-gradient(to right, #f6f0ea, #f5ece4, #f3e8dd, #f2e3d7, #f1dfd1);
+            box-shadow: -2px -2px 5px #cacaca;
+            transition: box-shadow 1s;
+        }
+
+        .nav_bar:hover {
+            box-shadow: 3px 3px 5px #cacaca;
+        }
+        .txt {
+            /* border: 1px solid black; */
+            display: inline-block;
+            min-width: 70%;
+            text-align: center;
+            left: 20px;
+            top: 12px;
+            font-size: 1.5rem;
+        }
+
+        a, span {
+            position: absolute;
+            border-radius: 5px;
+            /* border: 1px solid black; */
+        }
+
+        table {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 100%;
+        }
+
+        .cam {
+            top: 5px;
+            right: 50px;
+            /* border: 3px solid black; */
+        }
+        .home  {
+            right: 250px;
+            top: 15px;
+            font-size: 1.2rem;
+            text-decoration:none;
+            color: black;
+        }
+        .intro {
+            right: 130px;
+            top: 15px;
+            font-size: 1.2rem;
+            text-decoration:none;
+            color: black;
+        }
+
+        .home:hover, .intro:hover {
+            cursor: default;
+            color: white;
+        }
+
+        .cam > img {
+            /* right: 130px; */
+            height: 40px;
+            width: 40px;
+        }
+
+        td > img {
+            display: block;
+            height: 200px;
+            width: 300px;
+        }
+
+        .content {
+            /* padding: 20px; */
+            height: 400px;
+            width: 100%;
+            border: 1px solid black;
+            font-size: 1.3rem;
+            bottom: 200px;
+        }
+
+        .cont-con {
+            position: relative;
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 100%;
+
+        }
+        .cont {
+            position: absolute;
+            background-color: #f7e5d5;
+            font-size: 20px;
+            /* border: 1px solid black; */
+            height: 400px;
+            width: 700px;
+            left: 250px;
+            top: 50px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px #807272;
+            object-fit: cover;
+            transition: transform .5s;
+            }
+
+        .cont:hover {
+            box-shadow: 5px 5px 5px #807272;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+<div class="nav_bar">
+ <span class="txt">Natural Disaster Intensity Analysis and Classification using AI</span>
+
+<a href="/" class="home">Home</a>
+<a href="/intro" class="intro">Introduction</a>
+<a href="/predict" class="cam">
+<img src="{{ url_for('static', filename='images/camera.png') }}" alt="">
+</a>
+</div>
+</div>
+
+<div class="cont-con">
+<div class="cont">
+<b> Abstract: </b> Natural disasters not only disturb the human ecological system but also destroy the
+properties and critical infrastructures of human societies and even lead to permanent change in
+the ecosystem. Disaster can be caused by naturally occurring events such as earthquakes, cyclones,
+floods, and wildfires. Many deep learning techniques have been applied by various researchers
+to detect and classify natural disasters to overcome losses in ecosystems, but detection of naturaldisasters still faces issues due to the complex and imbalanced structures of images. To tackle thisproblem, we propose a multilayered deep convolutional neural network. The proposed model works in two blocks: Block-I convolutional neural network (B-I CNN), for detection and occurrence of disasters, and Block-II convolutional neural network (B-II CNN), for classification of natural disaster intensity types with different filters and parameters. The model is tested on 4428 natural images and performance is calculated and expressed as different statistical values: sensitivity (SE), 97.54%;specificity (SP), 98.22%; accuracy rate (AR), 99.92%; precision (PRE), 97.79%; and F1-score (F1), 97.97%. The overall accuracy for the whole model is 99.92%, which is competitive and comparable with state-of-the-art algorithms. <br>
+<b> Keywords: </b>deep learning; natural disasters intensity and classification; convolutional neural network
+</div>
+</div>
+    
+</body>
+</html>
